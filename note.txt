@@ -1,0 +1,47 @@
+Aplikasi Penentuan Staff Terbaik HMSI
+1. Keaktifan Memberi Tanggapan  (40)
+  a. Sangat Baik
+  b. Baik
+  c. Cukup
+  d. Kurang
+  e. Sangat Kurang
+
+2. Tepat waktu dalam mengikuti Rapat (20)
+  a. Sangat Baik
+  b. Baik
+  c. Cukup
+  d. Kurang
+  e. Sangat Kurang
+
+3. Berkontribusi dalam proker setiap bulan (30)
+  a. Sangat Baik
+  b. Baik
+  c. Cukup
+  d. Kurang
+  e. Sangat Kurang
+
+4. Menjaga Sikap (10)
+  a. Sangat Baik
+  b. Baik
+  c. Cukup
+  d. Kurang
+  e. Sangat Kurang
+
+Fitur 
+Login (user) superadmin sama admin(kadep)
+
+(Dashboard) isinya 
+
+Add user baru (nama, departemen, Jabatan)
+Pilih User dan pengisian kriteria 
+Ranking tertinggi ke rendah
+
+superadmin (kahima)
+  a. bisa nambah kadep
+
+admin (kadep)
+  a. bisa nambah staff
+
+staff (staff)
+  a. kriteria
+  b. data_diri
