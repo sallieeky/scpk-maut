@@ -14,5 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [DashboardController::class, 'maut']);
+Route::middleware(['auth'])->group(function () {
+  Route::get('/', [DashboardController::class, 'home']);
+  Route::get('/kelola-admin', [DashboardController::class, 'kelolaAdmin']);
+  Route::post('/kelola-admin/tambah', [DashboardController::class, 'kelolaAdminTambah']);
+  Route::post('/kelola-admin/edit/{user}', [DashboardController::class, 'kelolaAdminEdit']);
+  Route::post('/kelola-admin/hapus/{user}', [DashboardController::class, 'kelolaAdminHapus']);
+
+  Route::get('/kelola-staff', [DashboardController::class, 'kelolaStaff']);
+  Route::post('/kelola-staff/tambah', [DashboardController::class, 'kelolaStaffTambah']);
+  Route::post('/kelola-staff/edit/{staff}', [DashboardController::class, 'kelolaStaffEdit']);
+  Route::post('/kelola-staff/hapus/{staff}', [DashboardController::class, 'kelolaStaffHapus']);
+
+  Route::get('/logout', [DashboardController::class, 'logout']);
+});
+Route::get('/login', [DashboardController::class, 'login']);
+Route::post('/login', [DashboardController::class, 'loginPost']);
+
+Route::get('/maut', [DashboardController::class, 'maut']);
 Route::get('/rank', [DashboardController::class, 'rankMaut']);
