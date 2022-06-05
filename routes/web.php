@@ -28,7 +28,7 @@ Route::middleware(['auth'])->group(function () {
 
   Route::get('/logout', [DashboardController::class, 'logout']);
 });
-Route::get('/login', [DashboardController::class, 'login']);
+Route::get('/login', [DashboardController::class, 'login'])->middleware('guest')->name('login');
 Route::post('/login', [DashboardController::class, 'loginPost']);
 
 Route::get('/maut', [DashboardController::class, 'maut']);
